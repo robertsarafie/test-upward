@@ -4,10 +4,15 @@ import ArticleCarousel from '@/components/common/homepage/ArticleCarousel';
 import HomeCarousel from '@/components/common/homepage/HomeCarousel';
 import HomeContent from '@/components/common/homepage/HomeContent';
 import Link from 'next/link';
+import { Helmet } from 'react-helmet';
 
 export default function Home() {
   return (
     <div>
+      <Helmet>
+        <title>Robert Test Upward</title>
+      </Helmet>
+
       <header className="header">
         <Header></Header>
       </header>
