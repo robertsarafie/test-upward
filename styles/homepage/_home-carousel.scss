@@ -1,0 +1,86 @@
+.banner-main {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0px -19px 22px -6px rgba(0, 0, 0, 0.87);
+    box-shadow: 0px -19px 22px -6px rgba(0, 0, 0, 0.87);
+  }
+
+  picture {
+    img {
+      width: 100%;
+
+      @include tablet {
+        position: relative;
+      }
+    }
+  }
+
+  .home-carousel-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: white;
+
+    @include tablet {
+      padding-top: 10%;
+      padding-left: 10%;
+      position: absolute;
+      max-width: 300px;
+      background-color: unset;
+      align-items: center;
+    }
+
+    @include desktop {
+      padding-top: 7%;
+      padding-left: 7%;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    p {
+      font-size: 23px;
+      margin-bottom: 10px;
+
+      @include tablet {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      @include desktop {
+        text-align: unset;
+      }
+    }
+
+    a {
+      background-color: $brand-primary;
+      padding: 5px;
+      transition: all 0.3s linear;
+
+      &:hover {
+        background-color: unset;
+        outline: solid 1px $brand-primary;
+        outline-offset: -1px;
+      }
+
+      button {
+        color: $white;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        transition: all 0.3s linear;
+        cursor: pointer;
+
+        &:hover {
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+}

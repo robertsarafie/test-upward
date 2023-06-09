@@ -1,0 +1,143 @@
+.header {
+  background-color: $brand-primary;
+  position: relative;
+  z-index: 10000;
+
+  &-inner {
+    @include tablet {
+      padding: 0 50px;
+    }
+
+    @include desktop {
+      padding: 0 240px;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+
+      @include tablet {
+        padding-bottom: 10px;
+      }
+
+      .button-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-box-shadow: 8px 0px 11px -5px rgba(0, 0, 0, 0.4);
+        box-shadow: 8px 0px 11px -5px rgba(0, 0, 0, 0.4);
+
+        @include tablet {
+          display: none;
+        }
+
+        button {
+          color: white;
+          padding: 14px 20px;
+
+          i {
+            font-size: 25px;
+          }
+        }
+      }
+
+      .logo {
+        display: block;
+        padding: 5px 14px;
+
+        @include tablet {
+          background-color: $white;
+          padding: 14px 16px;
+          -webkit-box-shadow: 0px -19px 21px -5px rgba(0, 0, 0, 0.58);
+          box-shadow: 0px -19px 21px -5px rgba(0, 0, 0, 0.58);
+        }
+
+        img {
+          height: 40px;
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(200deg)
+            brightness(1000%) contrast(103%);
+
+          @include tablet {
+            filter: unset;
+          }
+        }
+      }
+
+      &-nav {
+        display: none;
+
+        @include tablet {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          padding-left: 14px;
+          justify-content: flex-end;
+        }
+
+        @include desktop {
+          padding-left: 36px;
+          justify-content: space-between;
+        }
+
+        .connect {
+          display: none;
+
+          @include desktop {
+            display: inline-flex;
+            font-size: 11px;
+            padding: 5px 0px;
+            align-self: flex-end;
+            background-color: $white;
+            -webkit-box-shadow: 0px -3px 21px -3px rgba(0, 0, 0, 0.58);
+            box-shadow: 0px -3px 21px -3px rgba(0, 0, 0, 0.58);
+
+            li {
+              padding: 0 10px;
+
+              a {
+                transition: all 0.3s linear;
+
+                &:hover {
+                  color: $brand-primary;
+                }
+              }
+            }
+
+            li:not(:last-child) {
+              border-right: 1px solid $gray-primary;
+            }
+          }
+        }
+
+        .navigation {
+          display: none;
+
+          @include tablet {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: white;
+            font-weight: 300;
+
+            li {
+              padding: 0 10px;
+
+              a {
+                transition: all 0.3s linear;
+
+                &:hover {
+                  color: $gray-secondary;
+                }
+              }
+            }
+
+            li:not(:last-child) {
+              border-right: 1px solid $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.home-content-inner {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  .home-content {
+    &-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      a {
+        padding: 10px 15px;
+        background: rgb(202, 131, 2);
+        background: linear-gradient(
+          0deg,
+          rgba(202, 131, 2, 1) 0%,
+          rgba(252, 177, 41, 1) 100%
+        );
+        -webkit-box-shadow: 0px 9px 14px -3px rgba(0, 0, 0, 0.08);
+        box-shadow: 0px 9px 14px -3px rgba(0, 0, 0, 0.08);
+
+        @include tablet {
+          -webkit-box-shadow: unset;
+          box-shadow: unset;
+        }
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          color: white;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &-description {
+      padding: 20px 30px;
+      -webkit-box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.16);
+      box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.16);
+
+      @include tablet {
+        padding: unset;
+        -webkit-box-shadow: unset;
+        box-shadow: unset;
+      }
+    }
+
+    &-title {
+      font-size: 24px;
+      color: #d88c02;
+      margin-bottom: 10px;
+    }
+
+    &-p {
+      font-size: 12px;
+    }
+
+    &-news {
+      padding: 20px 30px;
+
+      @include tablet {
+        padding: unset;
+      }
+
+      div:nth-of-type(1) {
+        margin-bottom: 10px;
+      }
+
+      a {
+        font-size: 12px;
+        color: black;
+      }
+    }
+  }
+}

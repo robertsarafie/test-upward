@@ -1,0 +1,33 @@
+.dots-main {
+  background-color: $gray-secondary;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.active-main {
+  background-color: $brand-primary;
+}
+
+.custom-dot-list-style-main {
+  gap: 7px;
+  padding-bottom: 20px !important;
+}
+
+.dots-article {
+  background-color: $gray-secondary;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.active-article {
+  background-color: $brand-primary;
+}
+
+.custom-dot-list-style-article {
+  gap: 7px;
+  top: 105%;
+}

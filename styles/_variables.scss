@@ -1,0 +1,18 @@
+$brand-primary: #d88c02;
+
+$gray-primary: #6e6e6e;
+$gray-secondary: #363636;
+
+$white: #fefefe;
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}

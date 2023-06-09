@@ -1,0 +1,21 @@
+@import './home-carousel';
+@import './article-carousel';
+@import './home-content';
+
+.content {
+  background: #e3e3e3;
+
+  @include tablet {
+    padding: 0 50px;
+    background: url('/images/homepage-background.png') center center / cover
+      no-repeat;
+  }
+
+  @include desktop {
+    padding: 0 240px;
+  }
+
+  &-inner {
+    padding-bottom: 10px;
+  }
+}

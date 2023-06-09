@@ -1,0 +1,24 @@
+@import './fonts';
+
+// fontawesome
+@import './../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import './../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@import './../node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
+@import './../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+
+// reset
+@import './reset';
+
+// variables
+@import './variables';
+
+// common
+@import './common/index';
+
+body {
+  font-size: 16px;
+  font-family: 'Inter';
+  color: $gray-primary;
+}
+
+@import './homepage/index';

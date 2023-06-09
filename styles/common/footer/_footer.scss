@@ -1,0 +1,215 @@
+.footer {
+  background: url('/images/footer-background-mobile.png') center center / cover
+    no-repeat;
+  width: 100%;
+  height: auto;
+  padding: 20px 0px;
+  -webkit-box-shadow: inset 0px 12px 9px -3px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0px 12px 9px -3px rgba(0, 0, 0, 0.8);
+
+  @include tablet {
+    background: url('/images/footer-background-tablet.png') center center /
+      cover no-repeat;
+  }
+
+  @include desktop {
+    background: url('/images/footer-background-desktop.png') center center /
+      cover no-repeat;
+  }
+
+  &-promo {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &-title {
+    font-size: 20px;
+    color: $brand-primary;
+    margin-bottom: 8px;
+  }
+
+  &-inner {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+
+    @include tablet {
+      padding: 0 50px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop {
+      padding: 0 240px;
+      grid-template-columns: 1fr 2fr 1fr 1fr;
+    }
+
+    @media (min-width: 768px) and (max-width: 1440px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &-address-inner {
+    display: flex;
+    column-gap: 20px;
+
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      form {
+        display: none;
+
+        @include tablet {
+          border: none;
+          display: flex;
+          align-items: center;
+          flex-direction: row-reverse;
+          background-color: #777777;
+          -webkit-box-shadow: inset 0px 0px 7px 1px rgba(0, 0, 0, 0.7);
+          box-shadow: inset 0px 0px 7px 1px rgba(0, 0, 0, 0.7);
+        }
+
+        button {
+          background: none;
+          border: none;
+          color: #afafaf;
+          display: flex;
+          align-items: center;
+          font-size: 18px;
+          padding: 5px;
+        }
+
+        input {
+          border: none;
+          font-family: 'Inter';
+          font-size: 12px;
+          background: none;
+          color: #afafaf;
+          padding-left: 5px;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::placeholder {
+            color: #afafaf;
+          }
+        }
+
+        input[type='search']::-webkit-search-decoration,
+        input[type='search']::-webkit-search-cancel-button,
+        input[type='search']::-webkit-search-results-button,
+        input[type='search']::-webkit-search-results-decoration {
+          display: none;
+        }
+      }
+
+      ul {
+        font-size: 12px;
+        line-height: 15px;
+
+        li:last-child {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &-help {
+    @include tablet {
+      order: 1;
+    }
+
+    @include desktop {
+      order: unset;
+    }
+    &-inner {
+      @include desktop {
+        min-width: 140px;
+      }
+      &-details {
+        font-size: 12px;
+        line-height: 15px;
+
+        & li::before {
+          content: '• ';
+        }
+      }
+    }
+  }
+
+  &-social {
+    &-inner {
+      &-details {
+        display: flex;
+        gap: 10px;
+
+        li {
+          font-size: 34px;
+        }
+      }
+    }
+  }
+
+  &-rights {
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      padding: 0 20px;
+
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        padding: 0 50px;
+      }
+
+      @include desktop {
+        padding: 0 240px;
+      }
+
+      &-details {
+        @include desktop {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        }
+
+        font-size: 10px;
+
+        p {
+          margin-bottom: 5px;
+
+          @include desktop {
+            margin-bottom: unset;
+          }
+        }
+
+        ul {
+          display: flex;
+          gap: 10px;
+          text-decoration: underline;
+        }
+      }
+
+      &-logo {
+        display: flex;
+        align-items: center;
+
+        p {
+          text-transform: uppercase;
+          font-size: 12px;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
